@@ -124,18 +124,15 @@ document.addEventListener('DOMContentLoaded', function () {
             image.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                const text = image.querySelector('.text');
+                const text = image.querySelector('.text'); 
                 if (text) {
-                    if (text.style.left === '0px') {
-                        text.style.left = '-100%'; // اخفيه لو ظاهر
-                    } else {
-                        text.style.left = '0'; // اظهره
-                    }
+                    text.style.left = '0'; 
                 }
             });
         });
     }
 });
+
 
 
 
