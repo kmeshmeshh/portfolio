@@ -124,16 +124,41 @@ document.addEventListener('DOMContentLoaded', function () {
             image.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                const text = image.querySelector('.text'); 
+                const text = image.querySelector('.text');
                 if (text) {
-                    text.style.left = '0'; 
+                    text.style.left = '0';
                 }
             });
         });
     }
 });
 
-
-
-
+document.getElementById('proj1').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'Demo.mp4'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj2').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://agecalculator-drab.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj3').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://countingdown-virid.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj4').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://currencyapi-vert.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj5').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://productmanagmentsystem.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj6').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://recipe-app-phi-ten.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
+document.getElementById('proj7').addEventListener('click', function (event) {
+    event.preventDefault(); // لمنع الرابط من فتح الصفحة مباشرة
+    window.location.href = 'https://coffeeshoplandingpage-eight.vercel.app/'; // إعادة توجيه المستخدم إلى الصفحة المطلوبة
+});
 
