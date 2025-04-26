@@ -1,0 +1,746 @@
+:root {
+    --text: #E6D5B8;
+    --titles: #F0A500;
+    --background: #1B1A17;
+    --buttons: #E45826;
+
+}
+
+* {
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background) !important;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto !important;
+    padding: 100px 0 20PX;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 55px;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: 50%;
+    background-color: var(--buttons);
+    width: 30%;
+    height: 2px;
+
+}
+
+#contactSection .title::after {
+    content: '';
+    position: absolute;
+    left: 220px;
+    top: 50%;
+    background-color: var(--buttons);
+    width: 20%;
+    height: 2px;
+}
+
+
+.left-side {
+    order: 1;
+    background-color: var(--text);
+    text-align: center;
+    border-radius: 15px;
+
+    .image {
+        max-width: 50%;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            position: relative;
+            top: -50px;
+        }
+    }
+
+    .name {
+        font-size: 25px;
+        margin: -30px 0 10px;
+        font-weight: 600;
+    }
+
+    .job {
+        background-color: var(--buttons);
+        color: var(--text);
+        width: fit-content;
+        margin: 10px auto;
+        padding: 5px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+
+    .left-icons {
+        margin: 10px 0;
+
+        i {
+            padding: 10px;
+            font-size: 18px;
+            background-color: var(--text);
+            margin: 0 5px;
+            border-radius: 10PX;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        i:hover {
+            background-color: var(--buttons);
+            color: var(--text);
+        }
+
+        .fa-facebook-f {
+            color: var(--background);
+        }
+
+        .fa-instagram {
+            color: var(--background);
+        }
+
+        .fa-github {
+            color: var(--background);
+        }
+
+        .fa-linkedin-in {
+            color: var(--background);
+        }
+    }
+
+    .left-contact {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 30px 0 8px;
+
+        .contact-cont {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: var(--buttons);
+            border-radius: 10px;
+            margin-bottom: 3px !important;
+            font-size: 17px;
+            width: 100%;
+            font-weight: 600;
+
+            p {
+                position: relative;
+                top: 15px;
+            }
+
+            i {
+                font-size: 20px;
+                position: relative;
+                top: -8px;
+                margin: 20px 15px 10px;
+                background-color: var(--text);
+                padding: 10px;
+                border-radius: 10PX;
+
+            }
+
+            .phone::before {
+                content: "Phone";
+                position: absolute;
+                top: -20px;
+                left: 0;
+                color: var(--text);
+            }
+
+            .mail::before {
+                content: "Email";
+                position: absolute;
+                top: -20px;
+                left: 0;
+                color: var(--text);
+            }
+
+            .git::before {
+                content: "GitHub";
+                position: absolute;
+                top: -20px;
+                left: 0;
+                color: var(--text);
+            }
+
+            .LinkedIn::before {
+                content: "LinkedIn";
+                position: absolute;
+                top: -20px;
+                left: 0;
+                color: var(--text);
+            }
+
+            .fa-mobile {
+                color: var(--background);
+            }
+
+            .fa-envelope {
+                color: var(--background);
+            }
+
+            a {
+                color: var(--background);
+            }
+
+        }
+
+
+    }
+
+    /* Start Download Button */
+    .box {
+        height: auto;
+        float: left;
+        transition: .3s linear;
+        position: relative;
+        display: block;
+        padding: 15px;
+        overflow: hidden;
+        text-align: center;
+        margin: 15px 5px;
+        background: transparent;
+        text-transform: uppercase;
+        font-weight: 800;
+
+    }
+
+    .box:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        transform: translateX(100%);
+    }
+
+    .box:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        box-sizing: border-box;
+        transform: translateX(-100%);
+
+    }
+
+    .box:hover {
+        box-shadow: 0 2px 5px var(--text);
+    }
+
+    .box:hover:before {
+        border-color: var(--buttons);
+        height: 100%;
+        transform: translateX(0);
+        transition: .3s transform linear, .3s height linear .3s;
+    }
+
+    .box:hover:after {
+        border-color: var(--buttons);
+        height: 100%;
+        transform: translateX(0);
+        transition: .3s transform linear, .3s height linear .5s;
+    }
+
+    button {
+        color: var(--buttons);
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    #down i {
+        padding-right: 10px;
+    }
+
+    /* End Download Button */
+}
+
+.right-side {
+    order: 3;
+    background-color: var(--text);
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    top: 0;
+
+    .right-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text);
+    }
+
+    .bar {
+        background-color: var(--background);
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 10px;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .bar:hover {
+        background-color: var(--buttons);
+        color: white;
+    }
+
+    .active {
+        background-color: var(--buttons);
+        color: white;
+    }
+
+}
+
+.middle {
+    order: 2;
+    background-color: var(--text);
+    border-radius: 15px;
+    padding: 50px !important;
+
+    .card-cont {
+        font-size: 19px;
+        font-weight: 600;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        height: fit-content;
+        width: 100%;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 10px;
+
+        h3 {
+            font-weight: 800;
+        }
+
+        h4 {
+            color: rgb(110, 110, 110);
+            font-weight: 700;
+        }
+
+    }
+
+    .blue {
+        background-color: rgba(0, 0, 0, 0.068);
+        color: var(--background);
+    }
+
+
+}
+
+.skills-section {
+    font-weight: 800;
+    display: none;
+
+}
+
+.skill-cont-body {
+    background-color: rgba(0, 0, 0, 0.068);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#workSection {
+    display: none;
+}
+
+#contactSection {
+    display: none;
+}
+
+.workCont {
+
+    margin: 30px 0;
+}
+
+.workCont .content {
+    width: 310px;
+    height: 120px;
+    margin: 23px 0px;
+}
+
+.left-work {
+    animation: appearLeft .3s linear forwards;
+}
+
+.right-work {
+    animation: appearRight .3s linear forwards;
+
+}
+
+@keyframes appearLeft {
+    0% {
+        left: -1000px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes appearRight {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 0;
+    }
+
+}
+
+.workCont .content .image {
+    max-width: 100%;
+    filter: drop-shadow(10);
+    position: relative;
+    display: inline-block;
+}
+
+.project1 {
+    position: relative;
+}
+
+.workCont .project1 .image::after {
+    content: "Project 1";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project1 {
+    position: relative;
+}
+
+.workCont .project1 .image::after {
+    content: "Project 1";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project1,
+.project2,
+.project3,
+.project4,
+.project5 {
+    position: relative;
+}
+
+.workCont .project1 .image::after {
+    content: "Project 1";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project2 .image::after {
+    content: "Project 2";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project3 .image::after {
+    content: "Project 3";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project4 .image::after {
+    content: "Project 4";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project5 .image::after {
+    content: "Project 5";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project6 .image::after {
+    content: "Project 6";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.workCont .project7 .image::after {
+    content: "Project 7";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--buttons);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.workCont {
+    position: relative;
+    overflow: hidden;
+}
+
+.workCont .image {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.workCont .text {
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+    z-index: 11;
+    text-align: center;
+    padding: 15px 0 0;
+    transition: 0.6s;
+    margin-bottom: -20px;
+
+    h2 {
+
+        color: var(--buttons);
+        font-weight: 00;
+    }
+}
+
+.workCont .image:hover .text,
+.workCont .image.active .text {
+    left: 0;
+}
+
+
+.workCont button {
+    background-color: var(--buttons);
+    color: var(--text);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: -20px;
+}
+
+.workCont .content .image img {
+    max-width: 100%;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .left-side .image {
+        img {
+            top: 20px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .middle {
+        .about-cont {
+            font-size: 11px;
+        }
+
+        .workCont .content {
+            margin: 0;
+        }
+
+
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 30px;
+        position: relative;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .left-side .image {
+        img {
+            top: 20px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .left-side {
+        order: 1;
+    }
+
+    .middle {
+        .about-cont {
+            font-size: 13px;
+        }
+    }
+
+    .right-side {
+        order: 2;
+        margin-bottom: 30px;
+        padding: 0;
+
+        .right-cont {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin: 10px;
+        }
+
+    }
+
+    .middle {
+        order: 3;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 30px;
+        position: relative;
+    }
+
+    .title::after {
+        width: 60%;
+        left: 100px;
+    }
+
+    #contactSection .title::after {
+        width: 60%;
+        left: 110px;
+    }
+}
